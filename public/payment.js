@@ -13,7 +13,7 @@ let selectedPrice;
 var createCheckoutSession = function () {
   var quantity = 1;
     if(selectedPrice == undefined){
-        selectedPrice = priceList[0].id;
+      return  selectedPrice = priceList[0].id;
     }
   return fetch('/create-checkout-session', {
     method: 'POST',
