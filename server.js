@@ -50,7 +50,7 @@ app.get('/checkout-session', async (req, res) => {
 app.post('/create-checkout-session', async (req, res) => {
 
   const { quantity, locale, price } = req.body;
-  console.log({locale, price});
+  const domainURL = process.env.DOMAIN;
   // Create new Checkout Session for the order
   // Other optional params include:
   // [billing_address_collection] - to display billing address details on the page
