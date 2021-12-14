@@ -52,7 +52,6 @@ const price_fetch = document.getElementById('price_pool');
     })
 
 $("#price_option").click(function(e){
-        e.preventDefault();
         let selected;
         selected = e.target.value;
         let priceNum = parseFloat(selected.replace(/£/g, ""));
