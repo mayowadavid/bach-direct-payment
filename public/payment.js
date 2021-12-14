@@ -68,7 +68,9 @@ fetch('/config')
     var stripe = Stripe(json.publicKey);
     // Setup event handler to create a Checkout Session on submit
     document.querySelector('#payNow').addEventListener('click', function (evt) {
+      $("#pay_rotate").toggle();
       createCheckoutSession().then(function (data) {
+        $("#pay_rotate").toggle();
         stripe
           .redirectToCheckout({
             sessionId: data.sessionId,
