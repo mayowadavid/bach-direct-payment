@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title data-i18n="title"></title>
+    <meta name="description" content="A demo of Stripe Payment Intents" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="./payment.js" defer></script>
+    <!-- Load translation files and libraries. -->
+    <script src="https://unpkg.com/i18next/i18next.js"></script>
+    <script src="https://unpkg.com/i18next-xhr-backend/i18nextXHRBackend.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
+    <script src="./translation.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="payment_body">
+        <div class="payment_container">
+            <h1>Hi, welcome to Qubemanagement property</h1>
+            <p>proceed to set up your montly rental payment via Bach  direct debit</p>
+            <div class="fetch_price" id="price_pool">
+                <p>Fetch Price option</p>
+                <img id="rotate" src="rotate.svg" alt="">
+            </div>
+            <div class="fetch_price_option">
+                <select id="price_option">
+                </select>
+            </div>
+            <div class="bach_pay_now">
+                <p id="payNow" >Pay Now >></p>
+            </div>
+            <div id="error-message"></div>
+        </div>
+    </div>
+  </body>
+</html>
