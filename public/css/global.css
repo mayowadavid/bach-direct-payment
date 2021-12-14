@@ -659,6 +659,10 @@ input[type="number"]::-webkit-outer-spin-button {
 .bach_pay_now > img {
   display: none;
   width: 18px;
+   animation-name: spin;
+  animation-duration: 900ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .fetch_price_option > select {
