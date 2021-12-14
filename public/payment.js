@@ -51,9 +51,9 @@ const price_fetch = document.getElementById('price_pool');
         prices();
     })
 const selected_price= document.getElementById('price_option);
-selected_price.addEventListener('click', async (e) => {
+selected_price.addEventListener('click', async (event) => {
         let selected;
-        selected = e.target.value;
+        selected = event.target.value;
         let priceNum = parseFloat(selected.replace(/£/g, ""));
         let returnPriceId = priceList.find(e => e.unit_amount/100 == priceNum );
         selectedPrice = returnPriceId.id;
