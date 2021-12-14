@@ -657,3 +657,25 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 700;
 }
 
+@media screen and (max-device-width:640px), screen and (min-device-width:140px) {
+
+  .payment_container{
+    width: 100%;
+  }
+  .payment_container > p {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+  .payment_container > h1 {
+    font-size: 60px;
+  }
+
+  .fetch_price {
+    width: 45%;
+    
+  }
+  .bach_pay_now > p {
+    padding: 10% 10%;
+  }
+}
