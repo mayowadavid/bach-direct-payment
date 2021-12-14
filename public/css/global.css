@@ -640,6 +640,13 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0 auto;
   margin-top: 5%;
   width: 15%;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 25%;
+  display: flex;
+  border-radius: 11px;
+  justify-content: space-evenly;
+  background-color: var(--headline-color);
 }
 
 .bach_pay_now > p {
@@ -647,8 +654,11 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #fff;
   font-weight: bold;
   padding: 10% 4%;
-  border-radius: 11px;
-  background-color: var(--headline-color);
+}
+
+.bach_pay_now > img {
+  display: none;
+  width: 18px;
 }
 
 .fetch_price_option > select {
