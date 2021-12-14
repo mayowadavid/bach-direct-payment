@@ -50,8 +50,8 @@ const price_fetch = document.getElementById('price_pool');
     price_fetch.addEventListener('click', async (event) => {
         prices();
     })
-
-$("#price_option").click(function(e){
+const selected_price= document.getElementById('price_option);
+selected_price.click(function(e){
         let selected;
         selected = e.target.value;
         let priceNum = parseFloat(selected.replace(/£/g, ""));
