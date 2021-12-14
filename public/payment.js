@@ -51,7 +51,7 @@ const price_fetch = document.getElementById('price_pool');
         prices();
     })
 const selected_price = document.getElementById('price_option');
-selected_price.addEventListener('click', async (event) => {
+selected_price.addEventListener('change', async (event) => {
         event.preventDefault();
         let selected;
         selected = event.target.value;
