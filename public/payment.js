@@ -65,12 +65,10 @@ fetch('/config')
     return result.json();
   })
   .then(function (json) {
-  console.log(json);
     var stripe = Stripe(json.publicKey);
     // Setup event handler to create a Checkout Session on submit
     document.querySelector('#payNow').addEventListener('click', function (evt) {
       createCheckoutSession().then(function (data) {
-          console.log(data);
         stripe
           .redirectToCheckout({
             sessionId: data.sessionId,
