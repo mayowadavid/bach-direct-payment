@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
   res.sendFile(path);
 });
 
-app.get('/config', async (req, res) => 
+app.get('/config', async (req, res) => {
   const price = process.env.PRICE;
   res.send({
     publicKey: process.env.STRIPE_PUBLISHABLE_KEY,
