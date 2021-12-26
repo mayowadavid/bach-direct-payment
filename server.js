@@ -33,16 +33,6 @@ app.get('/config', async (req, res) =>
   });
 });
 
-
-app.get('/price-fetch', async (req, res) => {
-  const {data} = await stripe.prices.list({
-    limit: 3,
-  });
-  res.send({
-    priceData: data
-  });
-});
-
 // Fetch the Checkout Session to display the JSON result on the success page
 app.get('/checkout-session', async (req, res) => {
   const { sessionId } = req.query;
