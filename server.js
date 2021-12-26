@@ -24,9 +24,12 @@ app.get('/', (req, res) => {
   res.sendFile(path);
 });
 
-app.get('/config', async (req, res) => {
+app.get('/config', async (req, res) => 
+  const price = await stripe.prices.retrieve(process.env.PRICE);
   res.send({
-    publicKey: process.env.STRIPE_PUBLISHABLE_KEY
+    publicKey: process.env.STRIPE_PUBLISHABLE_KEY,
+    unitAmount: price.unit_amount,
+    currency: price.currency,
   });
 });
 
@@ -49,7 +52,7 @@ app.get('/checkout-session', async (req, res) => {
 
 app.post('/create-checkout-session', async (req, res) => {
 const domainURL = process.env.DOMAIN;
-  const { quantity, locale, price } = req.body;
+  const { quantity, locale } = req.body;
   // Create new Checkout Session for the order
   // Other optional params include:
   // [billing_address_collection] - to display billing address details on the page
@@ -62,7 +65,7 @@ const domainURL = process.env.DOMAIN;
     locale: locale,
     line_items: [
       {
-        price: price,
+        price: process.env.PRICE,
         quantity: quantity
       },
     ],
