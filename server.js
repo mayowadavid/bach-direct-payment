@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/config', async (req, res) => 
-  const price = await stripe.prices.retrieve(process.env.PRICE);
+  const price = await process.env.PRICE;
   res.send({
     publicKey: process.env.STRIPE_PUBLISHABLE_KEY,
     unitAmount: price.unit_amount,
