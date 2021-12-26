@@ -7,14 +7,9 @@ var handleResult = function (result) {
   }
 };
 
-let selectedPrice;
-
 // Create a Checkout Session with the selected quantity
 var createCheckoutSession = function () {
   var quantity = 1;
-    if(selectedPrice == undefined){
-      return  selectedPrice = priceList[0].id;
-    }
   return fetch('/create-checkout-session', {
     method: 'POST',
     headers: {
